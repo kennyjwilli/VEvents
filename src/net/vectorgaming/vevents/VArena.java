@@ -21,6 +21,7 @@ abstract class VArena
     public void end()
     {
         endTeleportAction();
+        resetInventory();
         rewardPlayers();
         recordStats();
     }
@@ -79,6 +80,11 @@ abstract class VArena
     }
     
     public void endTeleportAction()
+    {
+        
+    }
+    
+    public void resetInventory()
     {
         
     }
