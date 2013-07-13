@@ -13,10 +13,10 @@ public enum EventType
     TDM(4),
     CTF(5);
     
-    private final int eventID = -1;
+    private final int eventID;
     
     EventType(int id)
     {
-        id = eventID;
+        eventID = id;
     }
 }

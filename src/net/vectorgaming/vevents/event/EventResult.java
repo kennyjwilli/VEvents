@@ -11,7 +11,7 @@ public enum EventResult
     ONE_WINNER(1),
     TEAM_WINNER(2);
     
-    public final int eventResult;
+    private final int eventResult;
     
     EventResult(int i)
     {
