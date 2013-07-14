@@ -7,7 +7,7 @@ import org.bukkit.entity.Player;
  *
  * @author Kenny
  */
-class Reward 
+public class Reward 
 {
     
 }

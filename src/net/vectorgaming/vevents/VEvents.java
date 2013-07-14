@@ -1,7 +1,9 @@
 package net.vectorgaming.vevents;
 
-import net.vectorgaming.vcore.VHelpMenu;
-import net.vectorgaming.vcore.permissions.PermissionHandler;
+import net.vectorgaming.vevents.commands.CommandManager;
+import net.vectorgaming.vevents.commands.EventsCommand;
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -10,13 +12,12 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class VEvents extends JavaPlugin
 {
-    public PermissionHandler pm = new PermissionHandler(this);
-    public VHelpMenu helpMenu = new VHelpMenu(this);
+    private CommandManager cm = new CommandManager();
     
     @Override
     public void onEnable()
     {
-        
+        setupEvents();
     }
     
     @Override
@@ -24,6 +25,8 @@ public class VEvents extends JavaPlugin
     
     private void setupEvents()
     {
-        
+        PluginManager pm = Bukkit.getPluginManager();
+        this.getCommand("events").setExecutor(cm);
+        CommandManager.registerCommand("events", EventsCommand.class);
     }
 }

@@ -22,12 +22,12 @@ public class VEBaseCommand implements CommandExecutor
         {
             if(!cs.hasPermission("vevents.help"))
             {
-                plugin.pm.sendNoPermMsg(cs, "access help menu.");
+                //plugin.pm.sendNoPermMsg(cs, "access help menu.");
                 return true;
             }
             if(args.length == 0)
             {
-                plugin.helpMenu.noArgHelpMsg(cs);
+                //plugin.helpMenu.noArgHelpMsg(cs);
                 return true;
             }
             if(args[0].equalsIgnoreCase("join"))

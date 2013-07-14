@@ -1,0 +1,10 @@
+name: VEvents
+main: net.vectorgaming.vevents.VEvents
+version: 0.1
+author: Kenny
+website: http://vectorgaming.net
+description: An Event Manager
+
+commands:
+  events:
+    description: Events command
