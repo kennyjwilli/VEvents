@@ -8,3 +8,5 @@ description: An Event Manager
 commands:
   events:
     description: Events command
+
+depend: [MobArena]

@@ -3,7 +3,6 @@ package net.vectorgaming.vevents.commands.user;
 
 import java.util.Arrays;
 import net.vectorgaming.vevents.commands.VCommand;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
 /**
@@ -16,13 +15,15 @@ public class VoteCommand extends VCommand
     @Override
     public boolean run(CommandSender cs, String[] argus) 
     {
-        try{
+        //Move args array over to begin after vote
         String[] args = Arrays.copyOfRange(argus, 1, argus.length);
-        }catch(Exception e)
+        
+        if(args.length == 0)
         {
             cs.sendMessage(getUsage());
             return true;
         }
+        
         return true;
     }
 

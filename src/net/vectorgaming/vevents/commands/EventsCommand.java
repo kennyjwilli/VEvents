@@ -1,6 +1,7 @@
 
 package net.vectorgaming.vevents.commands;
 
+import net.vectorgaming.vevents.commands.admin.*;
 import net.vectorgaming.vevents.commands.user.*;
 import org.bukkit.command.CommandSender;
 
@@ -49,6 +50,7 @@ public class EventsCommand extends VCommand
     {
         this.addSubCommand("help", HelpMenuCommand.class);
         this.addSubCommand("vote", VoteCommand.class);
+        this.addSubCommand("forcestart", ForceStartCommand.class);
     }
 
 }

@@ -14,6 +14,8 @@ public class VEvents extends JavaPlugin
 {
     private CommandManager cm = new CommandManager();
     
+    public VEvents(){}
+    
     @Override
     public void onEnable()
     {
@@ -29,4 +31,6 @@ public class VEvents extends JavaPlugin
         this.getCommand("events").setExecutor(cm);
         CommandManager.registerCommand("events", EventsCommand.class);
     }
+    
+    public VEvents getPlugin(){return this;}
 }

@@ -1,36 +1,39 @@
 
 package net.vectorgaming.vevents.event;
 
+import info.jeppes.ZoneCore.TriggerBoxes.PolygonTriggerBox;
+import info.jeppes.ZoneCore.TriggerBoxes.TriggerBox;
 import java.util.ArrayList;
 import net.vectorgaming.vevents.event.type.EventType;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 /**
  *
  * @author Kenny
  */
-public abstract class VArena
+public abstract class VEvent
 {
-    public ArrayList<Player> players = new ArrayList<>();
-    private Location arenaSpawnPt;
+    private ArrayList<Player> players = new ArrayList<>();
+    private ArrayList<Location> polygon = new ArrayList<>();
     private final int TASK_ID = 0;
+    private String name;
     
-    public VArena(Location loc)
+    public VEvent(String name)
     {
-        arenaSpawnPt = loc;
+        this.name = name;
     }
+    
+    public String getName(){return name;}
+    
+    public void setName(String name){this.name = name;}
     
     public abstract void start();
     
-    public void readyArena()
-    {
-        for(Player p : players)
-        {
-            p.teleport(arenaSpawnPt);
-        }
-    }
+    public abstract void readyArena();
     
     public abstract boolean isRunning();
     
@@ -46,6 +49,10 @@ public abstract class VArena
     
     public abstract EventType getEventType();
     
+    public void addPolygonPoint(Location loc){polygon.add(loc);}
+    
+    public ArrayList<Location> getPolygonPoints(){return polygon;}
+    
     public EventResult getResult()
     {
         if(isRunning())
@@ -53,7 +60,7 @@ public abstract class VArena
         return EventResult.ONE_WINNER;
     }
         
-    public ArrayList<Player> getActivePlayers(){return players;}
+    public ArrayList<Player> getPlayers(){return players;}
     
     public void addPlayer(Player p)
     {

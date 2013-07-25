@@ -7,16 +7,16 @@ package net.vectorgaming.vevents.event.type;
  */
 public enum EventType 
 {
-    MOB_ARENA(0),
-    PVP_ARENA(1),
-    SURVIVAL_GAMES(2),
-    TDM(4),
-    CTF(5);
+    MOB_ARENA("MOB_ARENA"),
+    PVP_ARENA("PVP_ARENA"),
+    SURVIVAL_GAMES("SURVIVAL_GAMES"),
+    TDM("TDM"),
+    CTF("CTF");
     
-    private final int eventID;
+    private final String event;
     
-    EventType(int id)
+    EventType(String e)
     {
-        eventID = id;
+        event = e;
     }
 }
