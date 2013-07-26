@@ -21,10 +21,12 @@ public abstract class VEvent
     private ArrayList<Location> polygon = new ArrayList<>();
     private final int TASK_ID = 0;
     private String name;
+    private String type;
     
-    public VEvent(String name)
+    public VEvent(String name, String type)
     {
         this.name = name;
+        this.type = type;
     }
     
     public String getName(){return name;}
@@ -47,7 +49,7 @@ public abstract class VEvent
     
     public abstract void forceStop();
     
-    public abstract EventType getEventType();
+    public String getType() {return type;}
     
     public void addPolygonPoint(Location loc){polygon.add(loc);}
     
