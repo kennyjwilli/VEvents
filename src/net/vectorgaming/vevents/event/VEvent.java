@@ -49,7 +49,7 @@ public abstract class VEvent
     
     public abstract void forceStop();
     
-    public String getType() {return type;}
+    public String getEventType() {return type;}
     
     public void addPolygonPoint(Location loc){polygon.add(loc);}
     

@@ -1,6 +1,5 @@
 package net.vectorgaming.vevents;
 
-import net.vectorgaming.varenas.ArenaManager;
 import net.vectorgaming.vevents.commands.CommandManager;
 import net.vectorgaming.vevents.commands.EventsCommand;
 import org.bukkit.Bukkit;

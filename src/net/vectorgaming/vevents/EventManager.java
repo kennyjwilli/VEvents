@@ -14,17 +14,17 @@ public class EventManager
     private static ArrayList<Class<? extends VEvent>> activeArenas = new ArrayList<>();
     private static HashMap<String, Class<? extends VEvent>> events = new HashMap<>();
     
-    public static void activateArena(Class<? extends VEvent> c)
-    {
-        if(!activeArenas.contains(c))
-            activeArenas.add(c);
-    }
-    
-    public static void deactivateArena(Class<? extends VEvent> c)
-    {
-        if(activeArenas.contains(c))
-            activeArenas.remove(c);
-    }
+//    public static void activateArena(Class<? extends VEvent> c)
+//    {
+//        if(!activeArenas.contains(c))
+//            activeArenas.add(c);
+//    }
+//    
+//    public static void deactivateArena(Class<? extends VEvent> c)
+//    {
+//        if(activeArenas.contains(c))
+//            activeArenas.remove(c);
+//    }
     
     public ArrayList<String> getEventTypes()
     {
